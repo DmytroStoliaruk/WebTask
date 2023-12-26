@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Web task 1</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/fans.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">     
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>  
+    
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+          <ul class="menu">
+            <li><a href="index.html">MAIN</a></li>
+            <li class="dropdown">
+              <a href="#">MATCHES</a>
+              <ul class="submenu">
+                  <li><a href="#">Match 1</a></li>
+                  <li><a href="#">Match 2</a></li>
+                  <li><a href="#">Match 3</a></li>
+              </ul>
+            </li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="fans.html">FANS</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+            <li><a href="admin.html">ADMIN</a></li>
+          </ul>
+      </nav>  
+
+      <h1 class="animated-text">Metalist</h1>
+
+      <a href="index.html" class="rotate-element"><img src="images/logo.png" alt="Metalist logo"></a>
+    </header>
+    
+    <main>
+      <h1>FC Metalist Kharkiv</h1>
+
+      <div class="container">  
+        <div class="contacts">
+          <h1>Contacts:</h1>
+          <br>
+          <p>Phone: +38 (057) 76 1925 6</p>
+          <p>Address: Plekhanivska, 65 </p>
+          <p>Email: info@metalist.ua</p>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </main>
+    <footer>
+        <h4>Softserve Academy, Dmytro Stoliaruk, 2023 </h4>
+    </footer>
+  </body>
+</html>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+  
+  var map = L.map('map').setView([49.981, 36.2615], 16);
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  var marker = L.marker([49.981, 36.2615]).addTo(map);
+</script>

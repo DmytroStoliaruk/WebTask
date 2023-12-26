@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+  url(../images/stadium-metallist.jpg); 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;   
+  align-items: center;  
+  backdrop-filter: blur(5px);
+  background-color: rgba(4, 4, 226, 0.7);
+  width: 100%;
+  min-height: 50px; 
+  color: yellow;
+}
+
+header img {
+  margin: 5px;
+  width: 40px;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;        
+  align-items: center;        
+  background-color: rgba(4, 4, 226, 0.7);
+  width: 100%;   
+  min-height: 30px;  
+  color: yellow;
+}
+
+/* menu styles */
+
+.menu li {
+  display: inline-block;
+  position: relative;
+  padding: 7px 10px;
+  list-style: none;
+}
+
+.menu li a {
+  color: yellow;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.menu li::after {
+  display: block;
+  transition: 0.5s;
+  margin: auto;
+  background: red;
+  width: 0%;
+  height: 2px;
+  content: "";
+}
+
+.menu li:hover::after {
+  width: 100%;
+}
+
+.submenu {
+  display:block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  flex-direction: column;
+  transition: max-height 0.5s linear; 
+  background-color: rgba(4, 4, 226, 0.7);
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown:hover .submenu {
+  max-height: 200px;
+}
+
+/* main page styles */
+
+.page-image img{
+  width: 100%;
+}
+
+.text-box {
+  margin: 20px 10% 0px 10%;
+  color: white;
+  text-align: justify;
+}
+
+h1 {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+.text-box p {
+  margin: 10px 0 10px;
+  color: white;
+  font-size: 18px;
+}
+
+/* lasg game result styles */
+.match-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+}
+
+.team-logo {
+  margin: 20px;
+  width: 100px;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.goal-authors {
+  display: flex; 
+  justify-content: center;
+  font-size: 12px; 
+}
+
+.goal-authors ul {
+  margin: 0 10px;
+  list-style: none; 
+}
+
+.goal-authors ul:first-child {
+  text-align: right; 
+}
+
+.goal-authors ul:last-child {
+  text-align: left;
+}
+
+/* contact page styles */
+.container {
+  display: flex; 
+  flex-direction: row; 
+
+}
+
+.contacts {
+  margin: 20px;
+  width: 40%;
+  min-width: auto;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+}
+
+#map {
+  margin: 20px; 
+  width: 60%;
+  height: 500px;
+}
+
+/* header amination styles */
+/* text animation */
+.animated-text {
+  opacity: 0; 
+  animation: slide-in 3s forwards ease-out;
+  color: yellow;
+  font-size: 36px;
+}
+
+/* moving text */
+@keyframes slide-in {
+  0% {
+      transform: translateX(400%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* logo rotate */
+.rotate-element {
+  animation-duration: 7s;
+  animation-timing-function: ease-in-out; /* ease-in, ease-out, linear, cubic-bezier ... */
+  animation-delay: 0s;
+  animation-iteration-count: infinite;    /* 1..infinite */
+  animation-direction: none;              /* normal, backwards, both, none, alternate */
+  animation-fill-mode: none;              /* forwards, backwards, both, none */
+  animation-play-state: running;          /* running, raused */
+  /* animation: rotate 5s ease-in-out 1s infinite; */
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* -------- WEB TASK3 Styles ----------- */
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li a {
+  color: yellow;
+  font-size: 24px;
+  text-decoration: none;
+}
+ 
+.menu > li {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 100%;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  position: absolute;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+  background-color: yellow;
+  width: 30px;
+  height: 4px;
+}
+
+.menu-button::before {
+  margin-top: -8px;
+  content: '';
+}
+
+.menu-button::after {
+  margin-top: 8px;
+  content: '';
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  transform: rotate(405deg);
+  margin-top: 0px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  transform: rotate(-405deg);
+  margin-top: 0px;
+}
+
+/* ==================== MEDIA styles ==================== */
+
+@media (max-width: 800px) {
+
+  .menu-button-container {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu li:hover {
+    background-color: blue;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  #menu-toggle ~ .menu li {
+    margin: 0;
+  }
+  
+  #menu-toggle:checked ~ .menu li {
+    height: 2.5em;
+  }
+
+  .menu > li {
+    position: relative;
+    background-color: rgb(5, 5, 160);
+    width: 320px;
+  }
+
+  .submenu {
+    display: flex;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    flex-direction: column;
+    z-index: 10;
+    transition: max-height 0.5s 0.5s linear; 
+    background-color: black;
+    width: 100%; 
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .submenu li:hover {
+    background-color: blue;
+  }
+
+  .menu li::after {
+    display: none;
+  }
+
+  .dropdown > a::after { 
+    position: absolute; 
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+    content: "▼"; 
+  }
+
+  /* media main page content styles */
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .text-box {
+    margin: 20px 5px 0px;
+    color: white; 
+    text-align: justify;
+  }
+
+  .team {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .team-logo {
+    margin: 5px;
+    width: 20px;
+  }
+  
+  .score {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* media styles for contact page */
+  .container {
+    flex-direction: column; 
+  }
+
+  .contacts {
+    width: 100%; 
+    min-height: 250px;
+  }
+
+  #map {
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}

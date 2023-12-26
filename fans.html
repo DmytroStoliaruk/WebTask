@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web task 4</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/fans.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">  
+    
+    <script src="js/index.js"></script>
+    <script src="js/fans2.js"></script>
+  </head>
+              
+  <body>
+    <header>
+      <nav class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="index.html">MAIN</a></li>
+          <li class="dropdown">
+            <a href="#">MATCHES</a>
+            <ul class="submenu">
+              <li><a href="#">Match 1</a></li>
+              <li><a href="#">Match 2</a></li>
+              <li><a href="#">Match 3</a></li>
+            </ul>
+          </li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="fans.html">FANS</a></li>
+          <li><a href="contacts.html">CONTACTS</a></li>
+          <li><a href="admin.html">ADMIN</a></li>
+        </ul>
+      </nav>  
+      
+      <h1 class="animated-text">Metalist</h1>
+      
+      <a href="index.html" class="rotate-element"><img src="images/logo.png" alt="Metalist logo"></a>
+    </header>
+    
+    <main>
+      <div class="container">
+        <section class="text-box">
+          <h1>Fans page</h1>   
+          <div id="messages"></div>     
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Provident consequuntur iste aliquid quidem aliquam quibusdam amperiam quod recusandae accusantium paraitur,
+              aspernatur nesciunt inventore voluptates repellendus dolore expedita maiores rerum commodi voluptatum
+              laborum necessitatibus assumenda quis consectetur. Ullam, harum. Numquam molestiae placeat,
+              impedit similique facere nemo culpa ipsa. Tempora, ipsa atque?
+            </p>
+            <div class="date-and-name">
+              <p class="date">06.12.2023, 18:00</p>
+              <p class="name">MetalistFan-2023</p>
+            </div>
+            <hr class="divider">
+          </article>
+          
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Provident consequuntur iste aliquid quidem aliquam quibusdam amperiam quod recusandae accusantium paraitur,
+              aspernatur nesciunt inventore voluptates repellendus dolore expedita maiores rerum commodi voluptatum
+              laborum necessitatibus assumenda quis consectetur. Ullam, harum. Numquam molestiae placeat,
+              impedit similique facere nemo culpa ipsa. Tempora, ipsa atque?
+            </p>
+            <div class="date-and-name">
+              <p class="date">06.12.2023, 19:00</p>
+              <p class="name">MetalistFan-2023</p>
+            </div>
+            <hr class="divider">
+          </article>
+          
+          <form class="fan-form" id="fanForm">
+            <textarea class="fan-message" id="fanText" placeholder="Write message..."></textarea>
+            <button type="submit" class="btn-submit">Send</button>
+          </form>        
+        </section>
+      </div>
+    </main>
+    
+    <footer>
+      <h4>Softserve Academy, Dmytro Stoliaruk, 2023 </h4>
+    </footer>
+    
+    <script src="js/fans.js"></script>
+  </body>
+</html>
+  

@@ -1,0 +1,47 @@
+.news-form {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin: 40px;
+  justify-content: center;
+}
+
+.news-form input, .news-form textarea {
+  display: block; 
+  width: 640px; 
+  margin-bottom: 15px; 
+}
+
+.hidden{
+  width: 220px;
+}
+
+#imageInput{
+  display: none;
+}
+
+.image-preview img {
+  width: 640px;
+  max-height: 360px;
+}
+
+.news-title {
+  width: 640px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.news-text {
+  width: 640px;
+  height: 160px;
+  font-size: 20px;
+}
+
+.btn-submit{
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  align-self: flex-end;
+}

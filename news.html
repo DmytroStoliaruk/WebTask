@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web task 5</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/news.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">  
+    
+    <script src="js/index.js"></script>
+  </head>
+              
+  <body>
+    <header>
+      <nav class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="index.html">MAIN</a></li>
+          <li class="dropdown">
+            <a href="#">MATCHES</a>
+            <ul class="submenu">
+              <li><a href="#">Match 1</a></li>
+              <li><a href="#">Match 2</a></li>
+              <li><a href="#">Match 3</a></li>
+            </ul>
+          </li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="fans.html">FANS</a></li>
+          <li><a href="contacts.html">CONTACTS</a></li>
+          <li><a href="admin.html">ADMIN</a></li>
+        </ul>
+      </nav>  
+      
+      <h1 class="animated-text">Metalist</h1>
+      
+      <a href="index.html" class="rotate-element"><img src="images/logo.png" alt="Metalist logo"></a>
+    </header>
+    
+    <main>
+      <div class="container">
+        <section class="text-box">
+          <h1>News page</h1>   
+          <div class="card-container">
+            <div id="news"></div>     
+         
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/Team.jpg">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Title news one </div>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                  <img src="images/stadium-metallist.jpg">
+              </div>
+              <div class="card-content">
+                  <div class="card-title">Title news two </div>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div> 
+        </section>
+      </div>
+    </main>
+    
+    <footer>
+      <h4>Softserve Academy, Dmytro Stoliaruk, 2023 </h4>
+    </footer>
+    
+    <script src="js/news.js"></script>
+  </body>
+</html>
+  

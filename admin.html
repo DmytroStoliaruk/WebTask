@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web task 4</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">  
+
+    <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="top-nav">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+          <ul class="menu">
+            <li><a href="index.html">MAIN</a></li>
+            <li class="dropdown">
+              <a href="#">MATCHES</a>
+              <ul class="submenu">
+                  <li><a href="#">Match 1</a></li>
+                  <li><a href="#">Match 2</a></li>
+                  <li><a href="#">Match 3</a></li>
+              </ul>
+            </li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="fans.html">FANS</a></li>
+            <li><a href="contacts.html">CONTACTS</a></li>
+            <li><a href="admin.html">ADMIN</a></li>
+          </ul>
+      </nav>  
+
+      <h1 class="animated-text">Metalist</h1>
+
+      <a href="index.html" class="rotate-element"><img src="images/logo.png" alt="Metalist logo"></a>
+    </header>
+    
+    <main>
+      <div >
+        <section class="text-box">
+          <h1>Add news</h1>
+          
+          <form class="news-form" id="newsForm">
+            <div class="image-preview">
+                <img id="imagePreview" src="images/Placeholder.png" alt="Image preview" />
+            </div>
+            <button type="button" id="chooseImage" class="btn-submit">Add image</button>
+            <input type="file" id="imageInput">
+        
+            <input type="text" class="news-title" id="newsTitle" placeholder="News title">
+            <div class="hidden"></div>
+            <textarea class="news-text" id="newsText" placeholder="News text"></textarea>
+            <button type="submit" class="btn-submit">Add news</button>
+        </form>
+      </div>
+    </main>
+    
+    <footer>
+      <h4>Softserve Academy, Dmytro Stoliaruk, 2023 </h4>
+    </footer>
+
+    <script src="js/admin.js"></script>
+  </body>
+  </html>
+  
+  

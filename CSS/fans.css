@@ -1,0 +1,32 @@
+.date-and-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-and-name .name {
+  font-size: 22px;
+}
+
+.divider {
+  margin: 20px 0; 
+}
+
+.fan-form {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
+.fan-message {
+  width: 80%;
+  height: 220px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.btn-submit{
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  align-self: flex-end;
+}
